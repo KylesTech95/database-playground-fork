@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter User</title>
+</head>
+<body>
+        <input type=button style="position:absolute;padding:.5rem 1rem;cursor:pointer;top:15%;"value="VIEW CODE" class="view-btn"/>
+    
+    <div class="text-container hide-option view" style="position:absolute;top:25%">
+        <div class="outer-layer">
+            <textarea name="text" style="height:200px;" class="textarea" cols="30" rows="10" readonly>
+            </textarea>
+        </div>
+    </div>
+    <!--todo container-->
+    <div id="todo-container">
+        <div id="container-border">
+            <!--list-container-->
+            <ul class="list-container">
+                <!--append todos-->
+            </ul>
+        </div>
+        <!--border-->
+        <div id="todo-border">
+            <p class="description">Filter through the database by to-do's (Case insensitive)</p>
+            
+                <!--Name & Email form-->
+                <form id="form7"></form>
+                <form id="form6"></form>
+                <form id="f0"></form>
+                <form action="/todo/:todo" method="POST" id="contact" class="form contact-form form-contact">
+                    <div class="form-div">
+                        <label for="name">Todo</label>
+                        <input type="text" class="text-inp" name="todo" placeholder=":todo"/>
+                    </div>
+
+                    <div id="button-container" style="display:flex;flex-direction: row;">
+                        <div class="choice-container">
+                            <div class="option-btn">FILTER MENU</div>
+                            <ul class="options option choice hide-option">
+                                <div class="01 op">contains</div>
+                                <div class="02 op">starts with</div>
+                                <div class="03 op">ends with</div>
+                                <div class="04 op">space around</div>
+                            </ul>
+                        </div>
+                        
+                        <button type="submit" class="submit-todo-filter filter-btn todo">FILTER</button>
+                        <button formaction="/filter/users" form="form6">FILTER BY USERS</button>
+                        <button formaction="/filter/email" form="form7">FILTER BY EMAIL</button>
+
+                        <button formaction="/" form="f0">HOME</button>
+
+                    </div>
+                </form>
+                
+        </div>
+    </div>
+</body>
+<script type="module" src="../public/filter.js"></script>
+</html>

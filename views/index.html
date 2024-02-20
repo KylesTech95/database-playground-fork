@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create User</title>
+</head>
+<body>
+    <!--todo container-->
+    <div id="todo-container">
+        <div id="container-border">
+            <!--list-container-->
+            <ul class="list-container">
+                <!--append todos-->
+            </ul>
+        </div>
+        
+
+        <!--border-->
+        <div id="todo-border">
+            <p class="description">Post a User and their To-do to the Database</p>
+                <!--Name & Email form-->
+                <form style="display:none" method="GET" id="form8"></form>
+                <form style="display:none" method="GET" id="form7"></form>
+                <form style="display:none" method="GET" id="form6"></form>
+                <form style="display:none" method="GET" id="form5"></form>
+                <form style="display:none" method="GET" id="form4"></form>
+                <form style="display:none" method="GET" id="form3"></form>
+                <form style="display:none" method="GET" id="form2"></form>
+                <form action="/form/users" method="POST" id="contact" class="form contact-form form-contact">
+                    <div class="form-div">
+                        <label for="name">Name</label>
+                        <input type="name" name="name" id="name"/>
+                    </div>
+                    
+                    <div class="form-div">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email"> <!--focused index-->
+                    </div>
+                    <div class="form-div">
+                        <label for="todo">Todo</label>
+                        <input type="text" name="todo" id="todo">
+                    </div>
+                    <div id="button-container">
+                        <button type="submit" name="submit">POST</button>
+                        <button name="changeemail" formaction="/change-email" form="form2">CHANGE EMAIL</button>
+                        <button name="changename" formaction="/change-name" form="form3">CHANGE NAME</button>
+                        <button formaction="/dropall" form="form4">DROP ALL USERS</button>
+                        <button formaction="/drop-user" form="form5">DROP USER</button>
+                        <button formaction="/filter/todo" form="form6">FILTER BY TODO</button>
+                        <button formaction="/filter/users" form="form7">FILTER BY USERS</button>
+                        <button formaction="/filter/email" form="form8">FILTER BY EMAIL</button>
+
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</body>
+<script src="../public/main.js"></script>
+</html>

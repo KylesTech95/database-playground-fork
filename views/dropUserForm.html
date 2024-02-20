@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../public/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop User Form</title>
+</head>
+<body>
+    <form action="" id="formxy" target="_blank"></form>
+
+
+    <!--todo container-->
+    <div id="todo-container">
+        <div id="container-border">
+            <!--list-container-->
+            <ul class="list-container">
+                <!--append todos-->
+            </ul>
+        </div>
+        
+
+
+        <!--border-->
+        <div id="todo-border">
+            <p class="description">Sorry to see you go! Drop user by Id# & Email</p>
+                <!--Name & Email & id validation-->
+                <form id="f0"></form>
+                <form action='/users/specific/drop' method="POST" id="contact" class="form contact-form form-contact">            
+                    <div class="form-div">
+                        <label for="id">ID#</label>
+                        <input type="text" name="id" id="id">
+                    </div>
+                    <div class="form-div">
+                        <label for="currentemail">Current Email</label>
+                        <input type="email" name="currentemail" id="currentemail"> <!--focused index-->
+                    </div>
+                    <div id="button-container">
+                    <button type="submit">DROP USER</button>
+                    <button formaction="/" form="f0">HOME</button>
+                    <button formaction="/api/id" form="formxy">ACCESS IDs</button>
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</body>
+<script src="../public/main.js"></script>
+</html>

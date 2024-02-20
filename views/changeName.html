@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Name</title>
+</head>
+<body>
+    <div class="text-container hide-option view" style="position:absolute;bottom:25%;">
+        <textarea name="text" style="height:200px;" class="textarea" cols="30" rows="10" readonly>
+
+        </textarea>
+    </div>
+    <form id="form1"></form>
+    <form action="" id="formxy" target="_blank"></form>
+        <!--todo container-->
+        <div id="todo-container">
+            <div id="container-border">
+                <!--list-container-->
+                <ul class="list-container">
+                    <!--append todos-->
+                </ul>
+            </div>
+        <!--border-->
+        <div id="todo-border">
+            <p class="description">Change Your Name with your Id# & Name</p>
+                <!--Name & Email & id validation-->
+                <form id="f0"></form>
+                <form action="/form/users/name/change" method="POST" id="contact" class="form contact-form form-contact">            
+                    <div class="form-div">
+                        <label for="id">ID#</label>
+                        <input type="text" name="id" id="id">
+                    </div>
+                    <div class="form-div">
+                        <label for="currentname">Current Name</label>
+                        <input type="text" name="currentname" id="currentname"> <!--focused index-->
+                    </div>
+                    <div class="form-div">
+                        <label for="newname">New Name</label>
+                        <input type="text" name="newname" id="newname"> <!--focused index-->
+                    </div>
+                    <div id="button-container">
+                    <button type="submit" name="submit">POST</button>
+                    <button formaction="/" form="f0">HOME</button>
+                    <button formaction="/api/id" form="formxy">ACCESS IDs</button>
+                    <button formaction="/change-email" form="form1">CHANGE EMAIL</button>
+                    </div>
+                </form>
+
+        </div>
+    </div>
+</body>
+<script src="../public/main.js"></script>
+</html>
