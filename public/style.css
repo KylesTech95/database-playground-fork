@@ -45,8 +45,9 @@
 
 .option{
     border:none;
+    left: -150px;
     position:absolute;
-    bottom:-150px;
+    bottom:0px;
     display:flex;
     flex-direction:column;
     align-items:center;
