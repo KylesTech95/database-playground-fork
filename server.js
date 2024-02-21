@@ -164,27 +164,30 @@ app.post("/form/users", async(req,res)=>{
             res.redirect('/') // redirect user back to homepage (same page currently on)
             return;   
         }
-        if(allUsers.length > 9){
-            res.sendFile(__dirname + '/views/max.html')
-        }
         // if user is not foudn in db, create new user
         if(!findUser){
-            const newUser = new User({ 
-                // create new user & email
-                name:name?name:'Anonymous'+count,
-                email
-            })
-            const sU = await newUser.save() //save user
-            console.log(sU)
-            // create new todo & email
-            const todoObj = new Todo({
-                email: sU.email,
-                todo:todo ? todo : 'N/A'.toLowerCase()
-            })
-            const sTodo = await todoObj.save();
-
-            console.log(sTodo)
-            res.sendFile(__dirname+'/views/create.html')
+            if(allUsers.length > 9){
+                res.sendFile(__dirname + '/views/max.html')
+            }
+            else{
+                const newUser = new User({ 
+                    // create new user & email
+                    name:name?name:'Anonymous'+count,
+                    email
+                })
+                const sU = await newUser.save() //save user
+                console.log(sU)
+                // create new todo & email
+                const todoObj = new Todo({
+                    email: sU.email,
+                    todo:todo ? todo : 'N/A'.toLowerCase()
+                })
+                const sTodo = await todoObj.save();
+    
+                console.log(sTodo)
+                res.sendFile(__dirname+'/views/create.html')
+            }
+            
         }
         else{
             // if user is found, redirect it to GET user info

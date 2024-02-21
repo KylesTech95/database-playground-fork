@@ -46,21 +46,21 @@ Utilize:
 
 ## Read
 
-![Filter search query](https://github.com/KylesTech95/database-playground-fork/blob/main/media/filterMethod.gif?raw=true)
+![Filter search query](https://github.com/KylesTech95/database-playground-fork/blob/main/media/filterMethod.gif?raw=true    )
 
-![No users Found or Read](https://github.com/KylesTech95/database-playground-fork/blob/main/media/noUsersFound.gif?raw=true)
+![No users Found or Read](https://github.com/KylesTech95/database-playground-fork/blob/main/media/noUsersFound.gif?raw=true )
 
 ## Update
 
-![Update User's Name](https://github.com/KylesTech95/database-playground-fork/blob/main/media/changeName.gif?raw=true)
+![Update User's Name](https://github.com/KylesTech95/database-playground-fork/blob/main/media/changeName.gif?raw=true   )
 
-![Update User's Email](https://github.com/KylesTech95/database-playground-fork/blob/main/media/emailChange.gif?raw=true)
+![Update User's Email](https://github.com/KylesTech95/database-playground-fork/blob/main/media/emailChange.gif?raw=true )
 
-![Update Permission Denied](https://github.com/KylesTech95/database-playground-fork/blob/main/media/permissionDenied.gif?raw=true)
+![Update Permission Denied](https://github.com/KylesTech95/database-playground-fork/blob/main/media/permissionDenied.gif?raw=true   )
 ## Delete
-![Drop One User](https://github.com/KylesTech95/database-playground-fork/blob/main/media/dropUser.gif?raw=true)
+![Drop One User](https://github.com/KylesTech95/database-playground-fork/blob/main/media/dropUser.gif?raw=true  )
 
-![Drop All Users](https://github.com/KylesTech95/database-playground-fork/blob/main/media/dropAllUsers.gif?raw=true)
+![Drop All Users](https://github.com/KylesTech95/database-playground-fork/blob/main/media/dropAllUsers.gif?raw=true )
 
 
 
