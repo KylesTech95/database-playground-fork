@@ -322,15 +322,19 @@ margin-bottom:-5rem;
 .option{
     bottom:2rem;
 }
-.text-container{
-    display:none;
-}
+
 .view{
     display:block;
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
 }
 .view>textarea{
     height:225px;
-    width:350px;
+    width:100%;
 }
 }
 
