@@ -53,6 +53,7 @@ _**User1** is created after entering:_
 3.Todo<br>
 
 ![New User](https://github.com/KylesTech95/database-playground-fork/blob/main/media/createNewUser.gif?raw=true?raw=true)
+
 _**Anonymous0** user is created after entering:_
 
 1._____<br>
@@ -159,12 +160,14 @@ If the above conditions are met, execute the `model.findOneAndUpdate()` function
 ![Update User's Email](https://github.com/KylesTech95/database-playground-fork/blob/main/media/emailChange.gif?raw=true )
 
 **Update fails**
+
 ![Update Permission Denied](https://github.com/KylesTech95/database-playground-fork/blob/main/media/permissionDenied.gif?raw=true   )
 
 ## Delete
 **Deleting** specific data takes place with the `deleteOne()` function.
 `await User.deleteOne({_id:id})//user found`
 ![Drop One User](https://github.com/KylesTech95/database-playground-fork/blob/main/media/dropUser.gif?raw=true  )
+
 **Deleting Multiple** data takes place with the `deleteMany()` function.
 
 `const d =  await User.deleteMany({})
