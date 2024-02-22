@@ -81,10 +81,15 @@ app.post("/form/users/email/change", async (req,res)=>{
     console.log(req.body)
     // console.log(findOne)
     try{
-        if(findOne&&currentemail===findOne.email&&currentemail.length!==0){
-            const updateEmail = await User.findOneAndUpdate({email:currentemail},{email:newemail},{new:true})
-            res.sendFile(__dirname + '/views/emailChangeConfirm.html')
-            return;
+        if(currentemail.length > 0){
+            if(findOne&&currentemail===findOne.email){
+                const updateEmail = await User.findOneAndUpdate({email:currentemail},{email:newemail},{new:true})
+                res.sendFile(__dirname + '/views/emailChangeConfirm.html')
+                return;
+            }
+            else{
+                res.sendFile(__dirname + '/views/permission.html')
+            }
         }
         else{
             res.sendFile(__dirname + '/views/permission.html')
@@ -166,7 +171,7 @@ app.post("/form/users", async(req,res)=>{
         }
         // if user is not foudn in db, create new user
         if(!findUser){
-            if(allUsers.length > 9){
+            if(allUsers.length > 50){
                 res.sendFile(__dirname + '/views/max.html')
             }
             else{
