@@ -23,16 +23,21 @@ fetch(api).then(res=>{
      for(let i = 0; i < users.length; i++){
         let li = document.createElement('li')
         li.setAttribute('class','list-item')
+        // li.classList.add('list-item') alternate method of adding class
+        li.classList.add('reject-highlight')
+        
         li.classList.add('hide')
         li.textContent = `${users[i].name} ${users[i].email}\n${users[i].todo}`
         ul.appendChild(li)
         if(/anon/i.test(users[i].name)){
             li.style.background='#f00'
         }
-        setTimeout(function(){
             li.classList.remove('hide')
             li.classList.add('appear')
-        },125*(i+1))
+        // setTimeout(function(){
+        //     li.classList.remove('hide')
+        //     li.classList.add('appear')
+        // },125*(i+1))
         // li.classList.add('appear')
      }
 
