@@ -13,6 +13,7 @@ const parseStr = (str) => {
     return str.toLowerCase();
 } 
 // connect mongoose
+// const uri = "mongodb+srv://regUser99:v37p2q1dWVtfpr4Q@testcluster99.5ho28ns.mongodb.net/?retryWrites=true&w=majority&appName=testCluster99"
 mongoose.connect(process.env.URI)
 // user schema
 const userSchema = new Schema({

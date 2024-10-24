@@ -2,11 +2,12 @@
   "name": "to-do-database-playground",
   "version": "1.0.0",
   "description": "Express database create, read, update, and delete operations",
-  "main": "app.js",
+  "main": "server.js",
   "repository": "https://github.com/KylesTech95/nodejs-api-database-playground",
   "author": "Kyle A",
   "private": false,
   "scripts": {
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "dependencies": {
