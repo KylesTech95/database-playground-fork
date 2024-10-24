@@ -138,7 +138,7 @@ app.post("/form/users/name/change", async (req,res)=>{
 // For Educational purposes, you can store your endpoint into an env variable. 
 // For example, I am hiding user's IDs for my own viewing.
 // 
-app.get(!secret ? '/api/secret' : secret , async (req,res)=>{
+app.get('/api/secret', async (req,res)=>{
     let users = await User.find({}).select({"__v":0}) // find all users, and hide the version number to clean up.
     let mappedUsers = [...users].map(u=>u)
     return !users ? res.send("No users are in the db collection") : res.json({users:mappedUsers})

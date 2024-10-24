@@ -266,14 +266,14 @@ button:hover,
     justify-content: center;
     align-items: center;
     margin-top:1.75rem;
-    padding:1rem;
-    background:#4f4f4f
+    padding:5px 1rem;
+    border-bottom:.5rem solid black;
 }
 
 button,.option-btn{
     font-weight: bold;
-    background:silver;
-    border:none;
+    background:rgb(195, 195, 195);
+    border:.5px solid #000;
     padding:.5rem 1rem;
     border-radius:8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
