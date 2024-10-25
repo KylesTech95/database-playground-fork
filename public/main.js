@@ -9,6 +9,10 @@ let todos = []
 let viewcode = document.querySelector('.view')
 let viewbtn = document.querySelector('.view-btn')
 
+if(textarea){
+    textarea.classList.add('def-text')
+    appendColMod(textarea.parentElement)
+}
 if(window.location.pathname!=='/form/users'){
 // fetch
 fetch(api).then(res=>{
@@ -91,6 +95,7 @@ if(window.location.pathname=='/form/users'||window.location.pathname=='/views/cr
     setTimeout(()=>{
         autoTextFn(create_seq,textarea,65)
     },1500)
+    textarea
 }
 if(window.location.pathname=='/dropall'||window.location.pathname=='/views/drop.html'){
     const create_seq =`//drop all users and todos
@@ -119,6 +124,7 @@ if(window.location.pathname=='/dropall'||window.location.pathname=='/views/drop.
     setTimeout(()=>{
         autoTextFn(create_seq,textarea,65)
     },1500)
+    textarea
 }
 if(window.location.pathname=='/users/specific/drop'||window.location.pathname=='/views/dropUser.html'){
     const create_seq = `//drop data with userId & email
@@ -146,6 +152,7 @@ if(window.location.pathname=='/users/specific/drop'||window.location.pathname=='
     setTimeout(()=>{
         autoTextFn(create_seq,textarea,65)
     },1500)
+    textarea
 }
 if(window.location.pathname=='/form/users/name/change'||window.location.pathname=='/views/nameChangeConfirm.html'){
     const create_seq = `app.post("/form/users/name/change", async (req,res)=>{
@@ -172,6 +179,7 @@ if(window.location.pathname=='/form/users/name/change'||window.location.pathname
     setTimeout(()=>{
         autoTextFn(create_seq,textarea,65)
     },1500)
+    textarea
 }
 if(window.location.pathname=='/form/users/email/change'||window.location.pathname=='/views/emailChangeConfirm.html'){
     const create_seq = `app.post("/form/users/email/change", async (req,res)=>{
@@ -199,6 +207,7 @@ if(window.location.pathname=='/form/users/email/change'||window.location.pathnam
     setTimeout(()=>{
         autoTextFn(create_seq,textarea,65)
     },1500)
+    textarea
 }
 
 window.addEventListener('click',e=>{
@@ -220,4 +229,31 @@ catch(err){
 }
 
 })
+
+function appendColMod(area){
+    const mod = document.createElement('div');
+    mod.classList.add('mod-tog')
+    mod.classList.add('tog-mod')
+    area.appendChild(mod)
+    // append ying yang icon here
+    modTogClick(area,mod)
+}
+
+function modTogClick(area,mod){
+mod.onclick = e => {
+    if(area.children[0] == textarea){
+        let ta = area.children[0] || textarea;
+        if(ta.classList.contains('def-text')){
+            ta.classList.remove('def-text')
+            ta.classList.add('invert')
+        }
+        else {
+            ta.classList.add('def-text')
+            ta.classList.remove('invert')
+        }
+    }
+    e.currentTarget.classList.toggle('invert-tog')
+}
+}
+
 
