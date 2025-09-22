@@ -177,16 +177,13 @@ If the above conditions are met, execute the `model.findOneAndUpdate()` function
 _____________________
 
 _Web Link: [Database Playground](https://database-playground.onrender.com/) <br>
-IG: [Instagram - index_daddy0](https://www.instagram.com/index_daddy0/)<br>
 Git: [Github](https://github.com/KylesTech95/database-playground-fork)_
 
-Currently the web service is set for limited use.
-If you want access to the playground, send me a DM and I will restart the service for you.
+
 
 Alternatively, users can clone the repository
 `https://github.com/KylesTech95/database-playground-fork.git`
-and fork for improved use.
-Don't forget to add me.
+and fork.
 
 
 
